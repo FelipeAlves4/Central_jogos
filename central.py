@@ -18,6 +18,7 @@ pygame.display.set_caption("Central de Jogos")
 FPS = 60
 
 # Nova paleta de cores
+COR_NOVA = (79, 68, 4)
 NEON_CYAN = (0, 255, 255)
 NEON_MAGENTA = (255, 0, 255)
 NEON_PURPLE = (128, 0, 255)
@@ -484,7 +485,7 @@ async def tic_tac_toe_game():
                         screen.blit(surf, (205 + j*100 + 40 * (1 - scale), 155 + i*100 + 40 * (1 - scale)))
                     elif board[i][j] == 'O':
                         surf = pygame.Surface((80, 80), pygame.SRCALPHA)
-                        pygame.draw.circle(surf, NEON_CYAN, (40, 40), 35 * scale, int(7 * scale))
+                        pygame.draw.circle(surf, COR_NOVA, (40, 40), 35 * scale, int(7 * scale))
                         surf = pygame.transform.scale(surf, (80 * scale, 80 * scale))
                         screen.blit(surf, (205 + j*100 + 40 * (1 - scale), 155 + i*100 + 40 * (1 - scale)))
         
